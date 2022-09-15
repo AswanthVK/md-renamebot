@@ -1,8 +1,10 @@
+import logging
 from config import Config 
 from pyrogram.types import Message 
 from pyrogram import filters, enums 
 from pyrogram.errors import UserNotParticipant
 
+logger = logging.getLogger(__name__)
 
 async def is_subscribed(_, bot, message: Message):
     channel = Config.AUTH_CHANNEL
